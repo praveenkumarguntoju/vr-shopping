@@ -1,0 +1,52 @@
+<html>
+
+<head>
+<meta aframe-injected="" content="yes" name="mobile-web-app-capable" />
+<script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
+</head>
+
+<body>
+
+<a-scene background="color: #ECECEC" class="fullscreen" inspector="" keyboard-shortcuts="" screenshot="" vr-mode-ui="">
+<a-assets>
+
+<img id="table" src="../images/laptoptable.jpg" />
+
+<img id="bag" src="../images/laptopbag.jpg" />
+<img id="laptop" src="../images/1234.jpg" />
+</a-assets>
+<a-curvedimage id="mozvr-logo" geometry="" height="1" material="" opacity="0.5" position="0 2.6 -1" radius="5.7" rotation="" src="#mozvr" theta-length="36">
+<a-animation attribute="rotation" delay="500" dur="1000" from="0 10 0" to="0 200 0"></a-animation>
+</a-curvedimage>
+
+<a-image id="bag" geometry="" height="3.5" material="" position="3.131465181045514 0.4832128432520735 -1.2448526872742196" rotation="0 130 0" scale="0.2 0.2 0.2" src="#bag" width="7">
+<a-animation attribute="rotation" delay="750" dur="1000" from="0 180 0" to="0 150 0"></a-animation>
+
+</a-image>
+
+
+<a-curvedimage id="laptop" geometry="thetaLength:18" height=".8" material="" position="0 0.23207230048166194 0" radius="5.7" rotation="0 130 0" scale="0.4 0.4 0.4" src="#laptop" theta-length="18">
+<a-animation attribute="rotation" delay="750" dur="1000" from="0 180 0" to="0 130 0"></a-animation>
+</a-curvedimage>
+
+<a-curvedimage id="table" geometry="thetaLength:20" height=".8" material="" position="-0.4853070328004234 0.2004656275895988 -1.12598872329911" radius="5.7" rotation="0 130 0" scale="0.8 0.8 0.4" src="#table" theta-length="18">
+<a-animation attribute="rotation" delay="750" dur="1000" from="0 180 0" to="0 130 0"></a-animation>
+</a-curvedimage>
+
+<a-entity>
+<a-cylinder color="#FFF" geometry="" height="1.6" material="" open-ended="true" position="0 0.5 0" radius="4" side="back"></a-cylinder>
+</a-entity>
+<a-light color="#fff" intensity="0.2" light="" position="-1 2 1" type="directional"></a-light>
+<a-light color="#fff" light="" type="ambient"></a-light>
+<a-entity camera="" wasd-controls="" position="" rotation="" look-controls="" aframe-injected=""></a-entity>
+</a-scene>
+  
+  
+  
+  
+  
+  
+  
+</body>
+
+</html>
