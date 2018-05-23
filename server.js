@@ -5,7 +5,7 @@ var fs = require('fs');
 var path = require('path');
 
   
-  app.use(express.static(path.join(__dirname, 'public')));
+  app.use(express.static(path.join(__dirname, '/public')));
 app.use(express.static(__dirname + 'images'));
 app.use(express.static(__dirname + 'jsfiles'));
 app.use(express.static(__dirname + '/styles'));
