@@ -6,11 +6,10 @@ const path = require('path');
 
 
 app.use('/static', express.static(path.join(__dirname, 'public')))
-app.use('/static', express.static('public'))
-app.use(express.static(__dirname + '/images'));
-app.use(express.static(__dirname + '/jsfiles'));
-app.use(express.static(__dirname + '/styles'));
-app.use(express.static(__dirname + '/phpfiles'));
+app.use(express.static(__dirname + 'images'));
+app.use(express.static(__dirname + 'jsfiles'));
+app.use(express.static(__dirname + 'styles'));
+app.use(express.static(__dirname + 'phpfiles'));
 app.get('/',function(req,res){
     res.sendfile('index.html');
 });
