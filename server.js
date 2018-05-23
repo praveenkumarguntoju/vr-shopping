@@ -2,6 +2,7 @@ var express = require('express');
 var app = require("express")();
 var http = require('http').Server(app);
 var fs = require('fs');
+const path = require('path');
 
 
 app.use('/static', express.static(path.join(__dirname, 'public')))
