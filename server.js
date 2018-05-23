@@ -2,7 +2,7 @@ var express = require('express');
 var app = require("express")();
 var http = require('http').Server(app);
 var fs = require('fs');
-
+var path = require('path');
 
   
   app.use(express.static(path.join(__dirname, 'public')));
