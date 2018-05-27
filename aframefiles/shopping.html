@@ -16,7 +16,15 @@
 </a-assets>
 
  <a-curvedimage id="mozvr-logo" geometry="" height="1" material="" opacity="0.5" position="0 2.6 -1" radius="5.7" rotation="" src="#mozvr" theta-length="36">
-<a-animation attribute="rotation" delay="500" dur="1000" from="0 10 0" to="0 200 0"></a-animation>
+ <a-entity
+          id="title"
+          position="-0.4853070328004234 1.004656275895988 -1.12598872329911"
+          geometry="primitive: plane; width: 4; height: 1.4"
+          material="color: black; opacity: 0.6"
+          text__appname="color: yellow; align: center; font: exo2bold; wrap-count: 12; z-offset: 0.01; baseline: bottom;
+                value: Table"
+          text__cityname="color: white; align: center; font: exo2semibold; wrap-count: 24; z-offset: 0.01; baseline: top;
+                value: #Laptop"></a-entity>
 </a-curvedimage>
 
 <a-curvedimage id="bag" geometry="" height="3.5" material="" position="3.131465181045514 0.4832128432520735 -1.2448526872742196" rotation="0 130 0" scale="0.2 0.2 0.2" src="#bag" width="7">
@@ -32,15 +40,7 @@
 <a-curvedimage id="table" geometry="thetaLength:20" height=".8" material="" position="-0.4853070328004234 0.2004656275895988 -1.12598872329911" radius="5.7" rotation="0 130 0" scale="0.8 0.8 0.4" src="#table" theta-length="18">
 <a-animation attribute="rotation" delay="750" dur="1000" from="0 180 0" to="0 130 0"></a-animation>
 </a-curvedimage>
- <a-entity
-          id="title"
-          position="-0.4853070328004234 1.004656275895988 -1.12598872329911"
-          geometry="primitive: plane; width: 4; height: 1.4"
-          material="color: black; opacity: 0.6"
-          text__appname="color: yellow; align: center; font: exo2bold; wrap-count: 12; z-offset: 0.01; baseline: bottom;
-                value: Table"
-          text__cityname="color: white; align: center; font: exo2semibold; wrap-count: 24; z-offset: 0.01; baseline: top;
-                value: #Laptop"></a-entity>
+
 
 <a-entity>
 <a-cylinder color="#FFF" geometry="" height="1.6" material="" open-ended="true" position="0 0.5 0" radius="4" side="back"></a-cylinder>
