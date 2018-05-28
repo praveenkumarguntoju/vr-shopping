@@ -15,6 +15,7 @@
                   <img id="laptop" src="toshiba.png" />
                   <img id="keyboard" src="keyboard1.jpg" />
                   <img id="xbox" src="xbox.jpg" />
+                  <audio id="sound" crossorigin="anonymous" preload="auto" src="https://cdn.aframe.io/360-image-gallery-boilerplate/audio/click.ogg"></audio>
                  
             </a-assets>
          
@@ -130,10 +131,12 @@
                       
                         this.el.addEventListener('mouseenter', function (evt) {
                               debugger;
-                              var id = this.getAttribute('id');
-                              var tst= document.getElementById('textVal');
-                              var rotation = this.getAttribute('rotation');
+                              
+                              let id = this.getAttribute('id');
+                              let tst= document.getElementById('textVal');
+                              let rotation = this.getAttribute('rotation');
                               evt.detail.intersection.point.y = evt.detail.intersection.point.y + 2;
+                              document.getElementById("sound").play();
                               tst.setAttribute('position', evt.detail.intersection.point);
                              if(!tst.getAttribute('visible')){
                                  tst.setAttribute('visible', true);
