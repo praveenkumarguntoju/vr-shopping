@@ -33,7 +33,7 @@
             repeat="indefinite"></a-animation>
             </a-entity> -->
 
-            <a-entity id = "textVal"  position="" scale="3 3 3" geometry="primitive: plane;" material="color: black; opacity: 0.6"
+            <a-entity id = "textVal"  position="" scale="3 3 3" visible="false" geometry="primitive: plane;" material="color: black; opacity: 0.6"
                   text__appname="color: yellow; align: center; font: exo2bold; wrap-count: 12; z-offset: 0.01; baseline: bottom;
                 value: Table" text__cityname="color: white;width:2; align: center; font: exo2semibold; wrap-count: 24; z-offset: 0.01; baseline: top;
                 value: #Laptop">
@@ -133,6 +133,8 @@
                               var rotation = this.getAttribute('rotation');
                               evt.detail.intersection.point.y = evt.detail.intersection.point.y + 2;
                               tst.setAttribute('position', evt.detail.intersection.point);
+                              if(!tst.getAttribute('visible'))
+                              tst.setAttribute('visible', true);
                               switch (id) {
                                     case 'table':
                                           debugger;
