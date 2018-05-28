@@ -1,66 +1,148 @@
 <html>
 
 <head>
-<meta aframe-injected="" content="yes" name="mobile-web-app-capable" />
-<script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
+      <meta aframe-injected="" content="yes" name="mobile-web-app-capable" />
+     
+      <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
 </head>
 
 <body>
 
-<a-scene background="color: #ECECEC" class="fullscreen" inspector="" keyboard-shortcuts="" screenshot="" vr-mode-ui="">
-<a-assets>
+      <a-scene background="color: #ECECEC" class="fullscreen" inspector="" keyboard-shortcuts="" screenshot="" vr-mode-ui="">
+            <a-assets>
+                  <img id="table" src="laptoptable.jpg" />
+                  <img id="bag" src="laptopbag.jpg" />
+                  <img id="laptop" src="1234.jpg" />
+                  <img id="keyboard" src="keyboard.jpg" />
+                  <img id="xbox" src="xbox.jpg" />
+                 
+            </a-assets>
+         
 
-<img id="table"  src="laptoptable.jpg" />
-<img id="bag"    src="laptopbag.jpg" />
-<img id="laptop" src="1234.jpg" />
-</a-assets>
+            <a-curvedimage src="#laptop" id="laptop" radius="5.7" theta-length="60" height="2.6" scale-on-mouseenter="to: 5 5 5" rotation="0 0 0"
+                  scale="1.2 1.2 1.2" material="" geometry="">
+            </a-curvedimage>
+        
+            <!-- <a-entity id = "textVal"   geometry="primitive: sphere;"  
+            material="color: black; opacity: 0.6">
+            <a-text value="Hello, World!"  ></a-text>
+            <a-animation attribute="rotation"
+            dur="10000"
+            fill="forwards"
+            to="0 360 0"
+            repeat="indefinite"></a-animation>
+            </a-entity> -->
 
- <a-curvedimage id="mozvr-logo" geometry="" height="1" material="" opacity="0.5" position="0 2.6 -1" radius="5.7" rotation="" src="#mozvr" theta-length="36">
- </a-curvedimage>
+            <a-entity id = "textVal"  position="" scale="3 3 3" geometry="primitive: plane;" material="color: black; opacity: 0.6"
+                  text__appname="color: yellow; align: center; font: exo2bold; wrap-count: 12; z-offset: 0.01; baseline: bottom;
+                value: Table" text__cityname="color: white; align: center; font: exo2semibold; wrap-count: 24; z-offset: 0.01; baseline: top;
+                value: #Laptop">
+                <a-animation attribute="rotation"
+                dur="10000"
+                fill="forwards"
+                to="0 360 0"
+                repeat="indefinite"></a-animation>
+            
+            </a-entity>
+           
+           
+                
 
-<a-curvedimage id="bag" geometry="" height="3.5" material="" position="3.131465181045514 0.4832128432520735 -1.2448526872742196" rotation="0 130 0" scale="0.2 0.2 0.2" src="#bag" width="7">
-<a-animation attribute="rotation" delay="750" dur="1000" from="0 180 0" to="0 150 0"></a-animation>
+            <a-curvedimage src="#bag" id="bag" radius="5.7" theta-length="60" height="2.6" scale-on-mouseenter="to: 5 5 5" rotation="0 90 0" scale="1.2 1.2 1.2"
+                  material="" geometry=""></a-curvedimage>
 
-</a-curvedimage>
+            <a-curvedimage src="#table" id="table" radius="5.7" theta-length="60" height="2.6" scale-on-mouseenter="to: 5 5 5" rotation="0 180 0"
+                  scale="1.2 1.2 1.2" material="" geometry=""></a-curvedimage>
+
+            <a-curvedimage src="#keyboard" id="keyboard" radius="5.7" theta-length="60" height="2.6" scale-on-mouseenter="to: 5 5 5" rotation="0 270 0"
+                  scale="1.2 1.2 1.2" material="" geometry=""></a-curvedimage>
+                 
+     
+            
+           
+
+      
+
+            <!-- <a-curvedimage src="#xbox" radius="5.7" theta-length="60" height="2.6" 
+                  rotation="0 -120 0" scale="1.2 1.2 1.2" material=""
+                  geometry="">
+                  <a-curvedimage src="#table" radius="5.7" theta-length="60" height="2.6" 
+                  rotation="0 180 0" scale="1.2 1.2 1.2" material=""
+                  geometry=""></a-curvedimage>
+                  
+                  <a-curvedimage src="#keyboard" radius="5.7" theta-length="60" height="2.6" 
+                  rotation="0 270 0" scale="1.2 1.2 1.2" material=""
+                  geometry=""></a-curvedimage>
+            
+            </a-curvedimage> -->
+            <!-- <a-curvedimage id="mozvr-logo" geometry="" height="1" material="" opacity="0.5" position="0 2.6 -1" radius="5.7" rotation=""
+                  src="#mozvr" theta-length="36">
+            </a-curvedimage>
+
+            <a-curvedimage id="bag" geometry="" height="3.5" material="" position="3.131465181045514 0.4832128432520735 -1.2448526872742196"
+                  rotation="0 130 0" scale="0.2 0.2 0.2" src="#bag" width="7">
+                  <a-animation attribute="rotation" delay="750" dur="1000" from="0 180 0" to="0 150 0"></a-animation>
+
+            </a-curvedimage>
 
 
-<a-curvedimage id="laptop" geometry="thetaLength:18" height=".8" material="" position="0 0.23207230048166194 0" radius="5.7" rotation="0 130 0" scale="0.4 0.4 0.4" src="#laptop" theta-length="18">
-<a-animation attribute="rotation" delay="750" dur="1000" from="0 180 0" to="0 130 0"></a-animation>
-</a-curvedimage>
+            <a-curvedimage id="laptop" geometry="thetaLength:18" height=".8" material="" position="0 0.23207230048166194 0" radius="5.7"
+                  rotation="0 130 0" scale="0.4 0.4 0.4" src="#laptop" theta-length="18">
+                  <a-animation attribute="rotation" delay="750" dur="1000" from="0 180 0" to="0 130 0"></a-animation>
+            </a-curvedimage>
 
-<a-curvedimage id="table" geometry="thetaLength:20" height=".8" material="" position="-0.4853070328004234 0.2004656275895988 -1.12598872329911" radius="5.7" rotation="0 130 0" scale="0.8 0.8 0.4" src="#table" theta-length="18">
-<a-animation attribute="rotation" delay="750" dur="1000" from="0 180 0" to="0 130 0"></a-animation>
-</a-curvedimage>
- 
-  <a-entity
-          id="title"
-          position="-0.4853070328004234 1.004656275895988 -1.12598872329911"
-          geometry="primitive: plane;"
-          material="color: black; opacity: 0.6"
-          text__appname="color: yellow; align: center; font: exo2bold; wrap-count: 12; z-offset: 0.01; baseline: bottom;
-                value: Table"
-          text__cityname="color: white; align: center; font: exo2semibold; wrap-count: 24; z-offset: 0.01; baseline: top;
-                value: #Laptop"></a-entity>
+            <a-curvedimage id="table" geometry="thetaLength:20" height=".8" material="" position="-0.4853070328004234 0.2004656275895988 -1.12598872329911"
+                  radius="5.7" rotation="0 130 0" scale="0.8 0.8 0.4" src="#table" theta-length="18">
+                  <a-animation attribute="rotation" delay="750" dur="1000" from="0 180 0" to="0 130 0"></a-animation>
+            </a-curvedimage> -->
+
+            <!-- <a-entity id="title" position="" geometry="primitive: plane;" material="color: black; opacity: 0.6"
+                  text__appname="color: yellow; align: center; font: exo2bold; wrap-count: 12; z-offset: 0.01; baseline: bottom;
+                value: Table" text__cityname="color: white; align: center; font: exo2semibold; wrap-count: 24; z-offset: 0.01; baseline: top;
+                value: #Laptop"></a-entity> -->
 
 
-<a-entity>
-<a-cylinder color="#FFF" geometry="" height="1.6" material="" open-ended="true" position="0 0.5 0" radius="4" side="back"></a-cylinder>
-</a-entity>
-<a-light color="#fff" intensity="0.2" light="" position="-1 2 1" type="directional"></a-light>
-<a-light color="#fff" light="" type="ambient"></a-light>
-<a-entity camera look-controls position="0 1.6 0">
-          <a-entity id="cursor" cursor="fuse:true;fuseTimeout:500" material="color:black" 
-           geometry="primitive:ring" position="0 0 -1" scale="0.01 0.01 0.01" raycaster="">
-          </a-entity>
-</a-entity>
-</a-scene>
-  
-  
-  
-  
-  
-  
-  
+
+            <a-light color="#fff" intensity="0.2" light="" position="-1 2 1" type="directional"></a-light>
+            <a-light color="#fff" light="" type="ambient"></a-light>
+            <a-entity camera look-controls  position="0 0 1">
+                  <a-entity id="cursor" cursor="fuse:true;fuseTimeout:500" material="color:black" geometry="primitive:ring" position="0 0 -1"
+                        scale="0.01 0.01 0.01" raycaster="">
+                  </a-entity>
+            </a-entity>
+      </a-scene>
+      <script>
+            AFRAME.registerComponent('listener', {
+                           tick: function () {
+                               console.log(this.el.getAttribute('position'));
+                                             }
+            });
+            AFRAME.registerComponent('scale-on-mouseenter', {
+                  schema: {
+                        to: {
+                              default: '2.5 2.5 2.5'
+                        }
+                  },
+                  init: function () {
+                        var data = this.data;
+                      
+                        this.el.addEventListener('mouseenter', function (evt) {
+                              debugger;
+                              var id = this.getAttribute('id');
+                              var tst= document.getElementById('textVal');
+                              var rotation = this.getAttribute('rotation');
+                              evt.detail.intersection.point.y = evt.detail.intersection.point.y + 2;
+                              
+                              tst.setAttribute('position', evt.detail.intersection.point);
+                           
+
+                            
+                        });
+                  }
+            });
+      </script>
+
+
 </body>
 
 </html>
