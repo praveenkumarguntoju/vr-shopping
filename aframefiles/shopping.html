@@ -35,7 +35,7 @@
 
             <a-entity id = "textVal"  position="" scale="3 3 3" geometry="primitive: plane;" material="color: black; opacity: 0.6"
                   text__appname="color: yellow; align: center; font: exo2bold; wrap-count: 12; z-offset: 0.01; baseline: bottom;
-                value: Table" text__cityname="color: white; align: center; font: exo2semibold; wrap-count: 24; z-offset: 0.01; baseline: top;
+                value: Table" text__cityname="color: white;width:2; align: center; font: exo2semibold; wrap-count: 24; z-offset: 0.01; baseline: top;
                 value: #Laptop">
                 <a-animation attribute="rotation"
                 dur="10000"
@@ -132,8 +132,28 @@
                               var tst= document.getElementById('textVal');
                               var rotation = this.getAttribute('rotation');
                               evt.detail.intersection.point.y = evt.detail.intersection.point.y + 2;
-                              
                               tst.setAttribute('position', evt.detail.intersection.point);
+                              switch (id) {
+                                    case 'table':
+                                          debugger;
+                                          tst.setAttribute('text__appname',{value:'Laptop Desk'});
+                                          tst.setAttribute('text__cityname',{value:'100$'});
+                                          break;
+                                    case 'laptop':
+                                          tst.setAttribute('text__appname',{value:'Thosiba'});
+                                          tst.setAttribute('text__cityname',{value:'700$'});
+                                          break;
+                                    case 'bag':
+                                          tst.setAttribute('text__appname',{value:'Amazon Basics'});
+                                          tst.setAttribute('text__cityname',{value:'70$'});
+                                          break;
+                                    case 'keyboard':
+                                          tst.setAttribute('text__appname',{value:'Dell'});
+                                          tst.setAttribute('text__cityname',{value:'50$'});
+                                          break;
+                                    default:
+                                          
+                              };
                            
 
                             
