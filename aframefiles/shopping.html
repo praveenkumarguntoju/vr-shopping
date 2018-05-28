@@ -106,8 +106,10 @@
             <a-light color="#fff" intensity="0.2" light="" position="-1 2 1" type="directional"></a-light>
             <a-light color="#fff" light="" type="ambient"></a-light>
             <a-entity camera look-controls  position="0 0 1">
-                  <a-entity id="cursor" cursor="fuse:true;fuseTimeout:500" material="color:black" geometry="primitive:ring" position="0 0 -1"
-                        scale="0.01 0.01 0.01" raycaster="">
+                   <a-entity cursor="fuse: true; fuse-timeout: 2000" position="0 0 -1" geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03"
+                        material="color: #E65F0D; shader: flat">
+                        <a-animation begin="fusing" end="mouseleave" easing="ease-out" attribute="scale" fill="backwards" from="1 1 1" to="0.2 0.2 0.2"
+                              dur="2000"></a-animation>
                   </a-entity>
             </a-entity>
       </a-scene>
