@@ -133,8 +133,9 @@
                               var rotation = this.getAttribute('rotation');
                               evt.detail.intersection.point.y = evt.detail.intersection.point.y + 2;
                               tst.setAttribute('position', evt.detail.intersection.point);
-                              if(!tst.getAttribute('visible'))
-                              tst.setAttribute('visible', true);
+                             if(!tst.getAttribute('visible')){
+                                 tst.setAttribute('visible', true);
+                              }
                               switch (id) {
                                     case 'table':
                                           debugger;
