@@ -16,12 +16,22 @@
                   <img id="xbox" src="xbox.jpg" />
                   <audio id="sound" crossorigin="anonymous" preload="auto" src="https://cdn.aframe.io/360-image-gallery-boilerplate/audio/click.ogg"></audio>
                   <img   id="skyimg" src="prague.jpg">
+                   <img id="buy" src="buy.png">
             </a-assets>
          
             <a-sky src=""></a-sky>
             <a-curvedimage src="#laptop" id="laptop" radius="5.7" theta-length="60" height="2.6" scale-on-mouseenter="to: 5 5 5" rotation="0 0 0"
                   scale="1.2 1.2 1.2" material="" geometry="">
             </a-curvedimage>
+            
+             <a-sphere src="#buy" add-to-basket="laptop" radius="7" position="70 -20 25">
+                  <a-animation attribute="rotation"
+                  dur="10000"
+                  fill="forwards"
+                  to="0 360 0"
+                  repeat="indefinite"></a-animation>
+
+            </a-sphere>
         
             <!-- <a-entity id = "textVal"   geometry="primitive: sphere;"  
             material="color: black; opacity: 0.6">
@@ -50,14 +60,38 @@
 
             <a-curvedimage src="#bag" id="bag" radius="5.7" theta-length="60" height="2.6" scale-on-mouseenter="to: 5 5 5" rotation="0 90 0" scale="1.2 1.2 1.2"
                   material="" geometry=""></a-curvedimage>
+            
+             <a-sphere src="#buy" add-to-basket="bag"  radius="1" position="0 -3 -8">
+                  <a-animation attribute="rotation"
+                  dur="10000"
+                  fill="forwards"
+                  to="0 360 0"
+                  repeat="indefinite"></a-animation>
+
+            </a-sphere>
 
             <a-curvedimage src="#table" id="table" radius="5.7" theta-length="60" height="2.6" scale-on-mouseenter="to: 5 5 5" rotation="0 180 0"
                   scale="1.2 1.2 1.2" material="" geometry=""></a-curvedimage>
+            <a-sphere src="#buy" add-to-basket="table" radius="1" position="7 -4 -8">
+                        <a-animation attribute="rotation"
+                        dur="10000"
+                        fill="forwards"
+                        to="0 360 0"
+                        repeat="indefinite"></a-animation>
+
+                  </a-sphere>
 
             <a-curvedimage src="#keyboard" id="keyboard" radius="5.7" theta-length="60" height="2.6" scale-on-mouseenter="to: 5 5 5" rotation="0 270 0"
                   scale="1.2 1.2 1.2" material="" geometry=""></a-curvedimage>
                  
-     
+                   <a-sphere src="#buy" add-to-basket="keyboard" radius="1" position="-11 -3 2">
+                        <a-animation attribute="rotation"
+                        dur="10000"
+                        fill="forwards"
+                        to="0 360 0"
+                        repeat="indefinite"></a-animation>
+
+                  </a-sphere> 
             
            
 
@@ -119,6 +153,24 @@
                                console.log(this.el.getAttribute('position'));
                                              }
             });
+            
+             AFRAME.registerComponent('add-to-basket', {
+                  schema: {
+                         },
+                  init: function () {
+                        var data = this.data;
+                      
+                        this.el.addEventListener('mouseenter', function (evt) {
+                             debugger;
+                              
+                              let id = this.getAttribute('id');
+                          });
+                  }
+            });
+            
+            
+            
+            
             AFRAME.registerComponent('scale-on-mouseenter', {
                   schema: {
                         to: {
