@@ -16,6 +16,7 @@
                   <img id="xbox" src="xbox.jpg" />
                   <audio id="sound" crossorigin="anonymous" preload="auto" src="https://cdn.aframe.io/360-image-gallery-boilerplate/audio/click.ogg"></audio>
                   <img   id="skyimg" src="prague.jpg">
+                  <img   id="ar" src="ar.jpg">
                    <img id="buy" src="buy.png">
             </a-assets>
          
@@ -25,6 +26,14 @@
             </a-curvedimage>
             
              <a-sphere src="#buy" add-to-basket="laptop" radius="7" position="70 -20 25">
+                  <a-animation attribute="rotation"
+                  dur="10000"
+                  fill="forwards"
+                  to="0 360 0"
+                  repeat="indefinite"></a-animation>
+
+            </a-sphere>
+               <a-sphere src="#ar" add-to-ar="laptop" radius="7" position="65 -20 25">
                   <a-animation attribute="rotation"
                   dur="10000"
                   fill="forwards"
@@ -164,6 +173,21 @@
                              debugger;
                               
                               let id = this.getAttribute('id');
+                          });
+                  }
+            });
+            
+            
+            AFRAME.registerComponent('add-to-ar', {
+                  schema: {
+                         },
+                  init: function () {
+                        var data = this.data;
+                      
+                        this.el.addEventListener('mouseenter', function (evt) {
+                             debugger;
+                              
+                             
                           });
                   }
             });
