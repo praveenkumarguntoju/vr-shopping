@@ -9,7 +9,7 @@ var path = require('path');
 app.use(express.static(__dirname + '/images'));
 
 app.use(express.static(__dirname + '/aframefiles'));
-// app.use(express.static(__dirname + "/wasteland_car"));
+app.use(express.static(__dirname + "/toshiba_satellite_laptop"));
 
 app.use(express.static(__dirname + "/viking_helmet"));
 app.use(express.static(__dirname + "/chair"));
