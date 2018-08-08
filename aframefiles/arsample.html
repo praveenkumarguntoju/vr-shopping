@@ -28,7 +28,7 @@
                   <a-asset-item id="helmet" src="helmet.gltf" crossOrigin="anonymous"></a-asset-item>
         </a-assets>
 <!--          end -->
-        <a-gltf-model autoscale="5" src="#chair"></a-gltf-model>
+        <a-gltf-model autoscale="5" src="#helmet"></a-gltf-model>
         <a-marker-camera preset='hiro'></a-marker-camera>
         
 <!--         <a-entity gltf-model="#brainstem" position="0 0 -5" scale="3 3 3"></a-entity> -->
@@ -66,9 +66,9 @@
                           return decodeURIComponent(results[2].replace(/\+/g, ' '));
                        }
                 
-                var foo = getParameterByName('item')
-                    foo = '#' + foo;
-                el.setAttribute('src',foo)
+//                 var foo = getParameterByName('item')
+//                     foo = '#' + foo;
+//                 el.setAttribute('src',foo)
                 const span = this.data;
                 const mesh = el.getObject3D('mesh');
 
