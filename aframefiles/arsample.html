@@ -1,6 +1,17 @@
 <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
 <script src="https://rawgit.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
 <!-- include ar.js for A-Frame -->
+<style>
+audio::-internal-media-controls-download-button {
+    display:none;
+}
+audio::-webkit-media-controls-enclosure {
+    overflow:hidden;
+}
+audio::-webkit-media-controls-panel {
+    width: calc(100% + 33px);
+}  
+</style>
 <script src="aframeAR.js"></script>
 
 <body style='margin : 0px; overflow: hidden;'>
@@ -9,6 +20,10 @@
             <a-asset-item id="tree" src="scene.gltf" crossOrigin="anonymous"></a-asset-item>
             <img id="table" src="table.png" />
         </a-assets> -->
+<audio controls preload="auto" style="width:100%;">
+    <source src="https://example.com/audio/audiofile.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+</audio>
     
 
     <!-- <a-entity gltf-model="#tree" height="0.5" width="0.5" position="0 1 -1"></a-entity> -->
