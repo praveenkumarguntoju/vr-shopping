@@ -20,10 +20,10 @@ audio::-webkit-media-controls-panel {
             <a-asset-item id="tree" src="scene.gltf" crossOrigin="anonymous"></a-asset-item>
             <img id="table" src="table.png" />
         </a-assets> -->
-<audio controls preload="auto" style="width:100%;">
+<!-- <audio controls preload="auto" style="width:100%;">
     <source src="https://example.com/audio/audiofile.mp3" type="audio/mpeg">
     Your browser does not support the audio element.
-</audio>
+</audio> -->
     
 
     <!-- <a-entity gltf-model="#tree" height="0.5" width="0.5" position="0 1 -1"></a-entity> -->
@@ -43,14 +43,49 @@ audio::-webkit-media-controls-panel {
 <!--                   <a-asset-item id="helmet" src="helmet.gltf" crossOrigin="anonymous"></a-asset-item> -->
         </a-assets>
 <!--          end -->
-        <a-gltf-model autoscale="5" src="#chair" rotation="0 0 0">
+       
+<!--         marker with prset -->
+        <a-marker preset='hiro'>
+          <a-gltf-model autoscale="5" src="#chair" rotation="0 0 0">
         <a-animation attribute="rotation"
                dur="10000"
                fill="forwards"
                to="0 360 0"
                repeat="indefinite"></a-animation>
         </a-gltf-model>
-        <a-marker-camera preset='hiro'></a-marker-camera>
+        
+        </a-marker>
+<!--     end -->
+        
+         <a-marker type='pattern' url='parle.patt'>
+            <a-entity id="textVal" position="" scale="3 3 3" geometry="primitive: plane;" material="color: black; opacity: 0.6" text__appname="color: yellow; align: center; font: exo2bold; wrap-count: 12; z-offset: 0.01; baseline: bottom;
+          value:Dell" text__cityname="color:white;width:2; align: center; font: exo2semibold; wrap-count: 24; z-offset: 0.01; baseline: top;
+          value: #550$" text__rating="color: yellow; align: center; font: exo2semibold; wrap-count: 24; z-offset: 0.01;
+          value: #*****">
+                <a-animation attribute="rotation" dur="10000" fill="forwards" to="0 360 0" repeat="indefinite"></a-animation>
+            </a-entity>
+
+
+        </a-marker>
+
+        <a-marker type='pattern' url='biscuit.patt'>
+            <a-entity id="textVal" position="" scale="3 3 3" geometry="primitive: plane;" material="color: black; opacity: 0.6" text__name="color: yellow; align: center; font: exo2bold; wrap-count: 12; z-offset: 0.01; baseline: bottom;
+          value:Tosibha" text__value="color: white;width:2; align: center; font: exo2semibold; wrap-count: 24; z-offset: 0.01; baseline: top;
+          value: #500$" text__rating="color: white;width:2; align: center; font: exo2semibold; wrap-count: 24; z-offset: 0.01;
+          value: #***">
+                <a-animation attribute="rotation" dur="10000" fill="forwards" to="0 360 0" repeat="indefinite"></a-animation>
+
+            </a-entity>
+        </a-marker>
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
 <!--         <a-entity gltf-model="#brainstem" position="0 0 -5" scale="3 3 3"></a-entity> -->
         
@@ -60,7 +95,10 @@ audio::-webkit-media-controls-panel {
 <!--         </a-entity> -->
         
         
-        </a-marker-camera>
+<!--         </a-marker-camera> -->
+        
+         <!-- add a simple camera -->
+          <a-entity camera></a-entity>
     </a-scene>
 
 <script>
