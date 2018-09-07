@@ -16,6 +16,7 @@ app.use(express.static(__dirname + '/aframefiles'));
 app.use(express.static(__dirname + "/3dmodels"));
 // app.use(express.static(__dirname + "/toon_dinosaur_creature_3"));
 app.use(express.static(__dirname + '/jsfiles'));
+app.use(express.static(__dirname + "/patterns"));
 app.use(express.static(__dirname + '/styles'));
 app.use(express.static(__dirname + '/phpfiles'));
 app.get('/',function(req,res){
