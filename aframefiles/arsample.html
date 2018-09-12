@@ -39,6 +39,7 @@ audio::-webkit-media-controls-panel {
     <a-scene embedded artoolkit='sourceType: webcam;'>
 <!--          3d model -->
         <a-assets>
+                  <img id="bag" src="bag.png" />
                   <a-asset-item id="chair" src="toon_dinosaur_creature_3/scene.gltf" crossOrigin="anonymous"></a-asset-item>
 <!--                   <a-asset-item id="helmet" src="helmet.gltf" crossOrigin="anonymous"></a-asset-item> -->
         </a-assets>
@@ -61,7 +62,7 @@ audio::-webkit-media-controls-panel {
                <a-entity id="textVal" position="" scale="3 3 3" geometry="primitive: plane;" material="color: black; opacity: 0.6" 
           text__appname="color: yellow; align: center; font: exo2bold; wrap-count: 12; z-offset: 0.01; baseline: bottom;
           value:Dell \n Price : 400£ " text__cityname="color:red;width:2; align: center; font: exo2semibold; wrap-count: 18; z-offset: 0.01; baseline: top;
-          value: ***">
+          value: ***"  image="src:#bag">
 <!--                 <a-animation attribute="rotation" dur="10000" fill="forwards" to="0 360 0" repeat="indefinite"></a-animation> -->
             </a-entity>
              
